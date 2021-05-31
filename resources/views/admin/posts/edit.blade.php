@@ -33,7 +33,7 @@
 	</div>
 	<div class="form-group">
 		<label for="image">Immagine</label>
-		<input type="file" id="image" name="image" placeholder="Image" value="{{$post->image}}">
+		<input type="file" id="image" name="image" value="{{$post->image}}">
 	</div>
 	<div class="mt-3">
 		<h3>Tags</h3>

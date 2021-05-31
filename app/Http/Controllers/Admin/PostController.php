@@ -111,6 +111,8 @@ class PostController extends Controller
         
         $data['slug'] = Str::slug($data['title'], '-');
 
+        $data['image'] = Storage::put('uploads', $data['image']);
+
         $post->update($data);
 
         if(!isset($data['tags'])) {
