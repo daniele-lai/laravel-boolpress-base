@@ -8,6 +8,8 @@ use App\Tag;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use App\Mail\SendNewMail;
+use Illuminate\Support\Facades\Mail;
 
 class PostController extends Controller
 {
@@ -38,6 +40,8 @@ class PostController extends Controller
     public function create()
     {
         $tags = Tag::all();
+
+        Mail::to('mail@mail.it')->send(new SendNewMail());
 
         return view('admin.posts.create', compact('tags'));
     }

@@ -1,0 +1,1 @@
+<h1>Aggiunto un nuovo post</h1>
